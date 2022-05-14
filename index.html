@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Vacation Planner</title>
+  </head>
+  <body>
+    <!-- Info section -->
+
+    <div class="mainForm container">
+      <div class="header">
+        <h1 class="header__title">
+          <i class="fas fa-umbrella-beach header__icon"></i> Vacation Planner
+          <i class="fas fa-umbrella-beach header__icon"></i>
+        </h1>
+      </div>
+      <div class="textField">
+        <label for="country" class="textField__lable required"
+          >Country to Visit</label
+        >
+        <input
+          type="text"
+          id="country"
+          class="textField__input inputCountry"
+          name="country"
+          placeholder="Enter a country"
+        />
+      </div>
+      <div class="groupItems">
+        <div class="textField textField--marginLeft">
+          <label for="departureCity" class="textField__lable required"
+            >Departure City</label
+          >
+          <input
+            type="text"
+            id="departureCity"
+            class="textField__input inputDepartureCity"
+            name="departureCity"
+            placeholder="Enter a city"
+          />
+        </div>
+        <div class="textField">
+          <label for="returnCity" class="textField__lable required"
+            >Return City</label
+          >
+          <input
+            type="text"
+            id="returnCity"
+            class="textField__input inputReturnCity"
+            name="returnCity"
+            placeholder="Enter a city"
+          />
+        </div>
+      </div>
+      <div class="groupItems">
+        <div class="textField textField--marginLeft">
+          <label for="departureDate" class="textField__lable required"
+            >Departure Date <i class="fas fa-calendar-alt"></i
+          ></label>
+          <input
+            type="date"
+            id="departureDate"
+            class="textField__input inputDepartureDate"
+            name="departureDate"
+          />
+        </div>
+        <div class="textField">
+          <label class="textField__label"
+            >Return Date <i class="fas fa-calendar-alt required"></i>
+          </label>
+          <input
+            type="date"
+            id="returnDate"
+            class="textField__input inputReturnDate"
+            name="returnDate"
+          />
+        </div>
+      </div>
+
+      <div class="groupItems groupItems--margin">
+        <label
+          class="textField__lable textField__label--left textField--marginLeft required"
+          >Add City</label
+        >
+        <label class="textField__lable required">Add Day</label>
+        <button class="btn btn--add"><strong>+</strong> City</button>
+      </div>
+      <div class="subForm groupItems--noMargin">
+        <div class="groupItems groupItems--margin">
+          <div class="textField textField--marginLeft">
+            <input
+              type="text"
+              class="textField__input inputCity"
+              name="city"
+              placeholder="Enter a city"
+            />
+          </div>
+          <div class="textField">
+            <input
+              type="number"
+              class="textField__input textField__input--short inputDays"
+              name="days"
+              placeholder="Days"
+            />
+          </div>
+          <span class="btn--delete hidden"> X</span>
+        </div>
+      </div>
+      <button class="btn btn--next">Next</button>
+      <p class="warning">
+        <small class="smallText">*</small> All the fields need to be filled
+      </p>
+    </div>
+
+    <!-- Itinerary section -->
+
+    <div class="itinerary container container--itinerary">
+      <div class="header">
+        <h1 class="header__title">Your Itinerary</h1>
+      </div>
+      <div class="itineraryList"></div>
+      <button class="btn btn--edit">Edit Itinerary</button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
